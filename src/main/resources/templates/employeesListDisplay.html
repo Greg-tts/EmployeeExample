@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Blog Site</title>
+	</head>
+	<body>	
+		<div class="container">
+			<h1>Employees</h1>
+	
+			<div class="row">
+				<div th:each="employee:${employees}">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h2 th:text="${employee.firstName}"></h2>
+							</div>
+							<div class="panel-body">
+								<strong><p th:text="${employee.lastName}" ></p></strong>
+								<p th:text="${employee.id}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>
